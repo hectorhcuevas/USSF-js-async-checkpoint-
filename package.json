@@ -1,0 +1,23 @@
+{
+  "name": "ussf-js-async-checkpoint-",
+  "version": "1.0.0",
+  "description": "Pokemon Javascript A-Sync Example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hectorhcuevas/USSF-js-async-checkpoint-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hectorhcuevas/USSF-js-async-checkpoint-/issues"
+  },
+  "homepage": "https://github.com/hectorhcuevas/USSF-js-async-checkpoint-#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "node-fetch": "^2.6.1"
+  }
+}
