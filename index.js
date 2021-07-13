@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-const filePath = "./input.txt"
 var fs = require('fs');
 //var request = require('request');
 var Promise = require('bluebird');
@@ -15,7 +14,13 @@ function capitalize(string)
 }
 
 // This function should retrieve the first line of the file at `filePath`
-var importPokemon = (filePath) => {
+
+const filePath = process.argv[2];
+//const filePath = "./input.txt"
+//console.log(process.argv);
+
+
+var importPokemon = () => {
     return new Promise(
       (resolve, reject) => {
         fs.readFile(`${filePath}`, 'utf8', (err, content) => {
@@ -35,6 +40,7 @@ var pokemonPromise = importPokemon(filePath)
         pokemonArray.forEach(pokemon => {
             fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
                 .then(function(response){
+
                     return response.json();
                 })
                 .then(function(json) {
